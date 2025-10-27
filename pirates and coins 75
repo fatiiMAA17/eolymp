@@ -1,0 +1,7 @@
+a, m = map(int, input().split())
+
+for n in range(2, 1000):  
+    total = (n + 1) * a + n * (n - 1) // 2 + n - 1
+    if total == m:
+        print(n)
+        break
