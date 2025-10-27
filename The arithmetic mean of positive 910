@@ -1,0 +1,10 @@
+n = int(input())
+numbers = list(map(float, input().split()))
+
+positive = [x for x in numbers if x > 0]
+
+if len(positive) == 0:
+    print("Not Found")
+else:
+    avg = sum(positive) / len(positive)
+    print(f"{avg:.2f}")
