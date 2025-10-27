@@ -1,0 +1,12 @@
+n = int(input())
+s = str(n)
+i, j = 0, len(s)-1
+count = 0
+
+while i <= j:
+    if s[i] == s[j]:
+        count += 1
+    i += 1
+    j -= 1
+
+print(count)
