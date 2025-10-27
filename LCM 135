@@ -1,0 +1,16 @@
+n = int(input())
+numbers = list(map(int, input().split()))
+
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+result = numbers[0]
+for num in numbers[1:]:
+    result = lcm(result, num)
+
+print(result)
