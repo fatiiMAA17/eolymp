@@ -1,0 +1,15 @@
+
+m = int(input())
+
+count = 0
+
+def is_palindrome(x):
+    s = str(x)
+    return s == s[::-1]
+
+while not is_palindrome(m):
+    rev = int(str(m)[::-1])  
+    m += rev                 
+    count += 1              
+
+print(count)
