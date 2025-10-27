@@ -1,0 +1,15 @@
+s = int(input())
+weights = list(map(int, input().split()))
+
+dp = [False] * (s + 1)
+dp[0] = True
+
+for w in weights:
+    for i in range(s, w - 1, -1):  
+        if dp[i - w]:
+            dp[i] = True
+
+for i in range(s, -1, -1):
+    if dp[i]:
+        print(i)
+        break
