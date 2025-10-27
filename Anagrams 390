@@ -1,0 +1,26 @@
+s = input().strip()
+
+def faktorial(n):
+    cavab = 1
+    for i in range(2, n + 1):
+        cavab *= i
+    return cavab
+
+
+herf_sayi = {}
+for herf in s:
+    if herf in herf_sayi:
+        herf_sayi[herf] += 1
+    else:
+        herf_sayi[herf] = 1
+
+
+n = len(s)
+
+
+num = faktorial(n)
+den = 1
+for say in herf_sayi.values():
+    den *= faktorial(say)
+
+print(num // den)
