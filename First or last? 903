@@ -1,0 +1,11 @@
+n = int(input())
+
+birinci = abs(n) // 100   
+axirinci = abs(n) % 10
+
+if birinci > axirinci:
+    print(birinci)
+elif birinci < axirinci:
+    print(axirinci)
+else:
+    print("=")
